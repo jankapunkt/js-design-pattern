@@ -1,0 +1,36 @@
+{
+    "name": "js-design-pattern",
+    "version": "0.0.1",
+    "description": "Examples of software design pattern in ES 6 JavaScript. For learning purposes.",
+    "main": "index.js",
+    "scripts": {
+        "build": "node build.js",
+        "prepublish": "npm run build",
+        "test": "mocha --timeout 15000 --compilers js:babel-core/register --recursive \"tests/**/*.tests.js\"",
+        "test:watch": "npm test -- --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jankapunkt/js-design-pattern.git"
+    },
+    "keywords": [
+        "examples",
+        "design",
+        "pattern"
+    ],
+    "author": "Jan Kuester <www.jankuester.com>",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/jankapunkt/js-design-pattern/issues"
+    },
+    "homepage": "https://github.com/jankapunkt/js-design-pattern#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^7.2.3",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "chai": "^4.1.2",
+        "mocha": "^3.5.2"
+    }
+}
