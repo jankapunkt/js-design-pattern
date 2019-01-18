@@ -1,124 +1,116 @@
-import {chai, assert} from 'chai';
+/* eslint-env mocha */
+import { assert } from 'chai'
+import { CarBuildDirector, CarBuilder, CarTypes, EngineBuilder, FueldTypes } from '../../src/creational/Builder'
 
-import {CarBuildDirector, CarBuilder, CarTypes, EngineBuilder, FueldTypes} from '../../src/creational/Builder';
+// import { notImplemented } from '../helpers.tests'
 
-import {notImplemented} from '../helpers.tests';
+describe('creational/Builder', function () {
+  describe('EngineBuilder', function () {
+    beforeEach(function () {
+      EngineBuilder.clear()
+    })
 
-describe("creational/Builder", function () {
+    it('clear', function () {
+      const power = 309
+      assert.notEqual(EngineBuilder._product.power, power)
+      EngineBuilder.setPower(power)
+      assert.equal(EngineBuilder._product.power, power)
+      EngineBuilder.clear()
+      assert.notEqual(EngineBuilder._product.power, power)
+    })
 
-	describe("EngineBuilder", function () {
+    it('setPower', function () {
+      const power = 309
+      assert.notEqual(EngineBuilder._product.power, power)
+      EngineBuilder.setPower(power)
+      assert.equal(EngineBuilder._product.power, power)
+    })
 
-		beforeEach(function () {
-			EngineBuilder.clear();
-		});
+    it('build', function () {
+      const power = 123123
+      const type = FueldTypes.GAS
 
-		it("clear", function () {
-			const power = 309;
-			assert.notEqual(EngineBuilder._product.power, power);
-			EngineBuilder.setPower(power);
-			assert.equal(EngineBuilder._product.power, power);
-			EngineBuilder.clear();
-			assert.notEqual(EngineBuilder._product.power, power);
-		});
+      const sportsengine = EngineBuilder.setPower(power).setFuelType(type).build()
+      assert.equal(sportsengine.power, power)
+      assert.equal(sportsengine.fuelType, type)
+    })
+  })
 
-		it("setPower", function () {
-			const power = 309;
-			assert.notEqual(EngineBuilder._product.power, power);
-			EngineBuilder.setPower(power);
-			assert.equal(EngineBuilder._product.power, power);
-		});
+  describe('CarBuilder', function () {
+    beforeEach(function () {
+      CarBuilder.clear()
+    })
 
-		it("build", function () {
-			const power = 123123;
-			const type = FueldTypes.GAS;
+    it('clear', function () {
+      const size = 213213
+      CarBuilder.setWheelSize(size)
+      assert.equal(CarBuilder._product.wheelSize, size)
+      CarBuilder.clear()
+      assert.notEqual(CarBuilder._product.wheelSize, size)
+    })
 
-			const sportsengine = EngineBuilder.setPower(power).setFuelType(type).build();
-			assert.equal(sportsengine.power, power);
-			assert.equal(sportsengine.fuelType, type);
-		});
-	});
+    it('setWheelSize', function () {
+      const size = 213213
+      assert.notEqual(CarBuilder._product.wheelSize, size)
+      CarBuilder.setWheelSize(size)
+      assert.equal(CarBuilder._product.wheelSize, size)
+    })
 
-	describe("CarBuilder", function () {
+    it('setType', function () {
+      const type = CarTypes.TYPE_CITY_CAR
+      assert.notEqual(CarBuilder._product.type, type)
+      CarBuilder.setType(type)
+      assert.equal(CarBuilder._product.type, type)
+    })
 
+    it('setEngine', function () {
+      const engine = {}
+      assert.notEqual(CarBuilder._product.engine, engine)
+      CarBuilder.setEngine(engine)
+      assert.equal(CarBuilder._product.engine, engine)
+    })
 
-		beforeEach(function () {
-			CarBuilder.clear();
-		});
+    it('addDrive', function () {
+      assert.isUndefined(CarBuilder._product.drive)
+      assert.isUndefined(CarBuilder._product.driveAction)
+      CarBuilder.addDrive()
+      const driveResult = CarBuilder.build()
 
-		it("clear", function () {
-			const size = 213213;
-			CarBuilder.setWheelSize(size);
-			assert.equal(CarBuilder._product.wheelSize, size);
-			CarBuilder.clear();
-			assert.notEqual(CarBuilder._product.wheelSize, size);
-		});
+      assert.throws(function () {
+        driveResult.drive()
+      })
 
-		it("setWheelSize", function () {
-			const size = 213213;
-			assert.notEqual(CarBuilder._product.wheelSize, size);
-			CarBuilder.setWheelSize(size);
-			assert.equal(CarBuilder._product.wheelSize, size);
-		});
+      CarBuilder.setEngine(EngineBuilder.clear().build())
+      const withEngine = CarBuilder.build()
+      assert.equal(withEngine.drive(), withEngine.driveAction)
+    })
 
-		it("setType", function () {
-			const type = CarTypes.TYPE_CITY_CAR;
-			assert.notEqual(CarBuilder._product.type, type);
-			CarBuilder.setType(type);
-			assert.equal(CarBuilder._product.type, type);
-		});
+    it('build', function () {
+      const power = 415
+      const fuelType = FueldTypes.GAS
+      const wheelSize = 22
+      const carType = CarTypes.TYPE_SPORTS_CAR
 
-		it("setEngine", function () {
-			const engine = {};
-			assert.notEqual(CarBuilder._product.engine, engine);
-			CarBuilder.setEngine(engine);
-			assert.equal(CarBuilder._product.engine, engine);
-		});
+      const sportsengine = EngineBuilder.clear().setPower(power).setFuelType(fuelType).build()
+      const sportScar = CarBuilder.clear().setType(carType).setWheelSize(wheelSize).setEngine(sportsengine).addDrive().build()
 
-		it("addDrive", function () {
-			assert.isUndefined(CarBuilder._product.drive);
-			assert.isUndefined(CarBuilder._product.driveAction);
-			CarBuilder.addDrive();
-			const driveResult = CarBuilder.build();
+      assert.equal(sportScar.engine.power, power)
+      assert.equal(sportScar.engine.fuelType, fuelType)
+      assert.equal(sportScar.wheelSize, wheelSize)
+      assert.equal(sportScar.type, carType)
+    })
+  })
 
-			assert.throws(function () {
-				driveResult.drive();
-			});
+  describe('CarBuildDirector', function () {
+    it('construct known type', function () {
+      const suvCar = CarBuildDirector.construct(CarTypes.TYPE_SUV)
+      assert.equal(suvCar.drive(), suvCar.driveAction)
+    })
 
-			CarBuilder.setEngine(EngineBuilder.clear().build());
-			const withEngine = CarBuilder.build();
-			assert.equal(withEngine.drive(), withEngine.driveAction);
-		});
-
-		it("build", function () {
-
-			const power = 415;
-			const fuelType = FueldTypes.GAS;
-			const wheelSize = 22;
-			const carType = CarTypes.TYPE_SPORTS_CAR;
-
-			const sportsengine = EngineBuilder.clear().setPower(power).setFuelType(fuelType).build();
-			const sportScar = CarBuilder.clear().setType(carType).setWheelSize(wheelSize).setEngine(sportsengine).addDrive().build();
-
-			assert.equal(sportScar.engine.power, power);
-			assert.equal(sportScar.engine.fuelType, fuelType);
-			assert.equal(sportScar.wheelSize, wheelSize);
-			assert.equal(sportScar.type, carType);
-		});
-	});
-
-
-	describe("CarBuildDirector", function () {
-
-		it ("construct known type", function () {
-			const suvCar = CarBuildDirector.construct(CarTypes.TYPE_SUV);
-			assert.equal(suvCar.drive(), suvCar.driveAction);
-		});
-
-		it ("throws on unknown type", function () {
-			assert.throws(function () {
-				CarBuildDirector.construct("some random type");
-			});
-		});
-	});
-});
-
+    it('throws on unknown type', function () {
+      assert.throws(function () {
+        CarBuildDirector.construct('some random type')
+      })
+    })
+  })
+})

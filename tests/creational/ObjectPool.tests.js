@@ -1,12 +1,10 @@
-import {chai, assert} from 'chai';
+/* eslint-env mocha */
+// import { assert } from 'chai'
+// import { ObjectPool, PooledObject } from '../../src/creational/ObjectPool'
+import { notImplemented } from '../helpers.tests'
 
-import {ObjectPool, PooledObject} from '../../src/creational/ObjectPool';
-import {notImplemented} from '../helpers.tests';
-
-describe("creational/ObjectPool", function () {
-
-	it("is initially empty", function () {
-		notImplemented();
-	});
-
-});
+describe('creational/ObjectPool', function () {
+  it('is initially empty', function () {
+    notImplemented()
+  })
+})

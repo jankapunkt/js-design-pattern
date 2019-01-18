@@ -1,3 +1,3 @@
 export const notImplemented = function () {
-	throw new Error("not yet implemented");
-};
+  throw new Error('not yet implemented')
+}
