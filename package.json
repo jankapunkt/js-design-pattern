@@ -4,10 +4,8 @@
     "description": "Examples of software design pattern in ES 6 JavaScript. For learning purposes.",
     "main": "index.js",
     "scripts": {
-        "build": "node build.js",
-        "prepublish": "npm run build",
-        "test": "mocha --timeout 15000 --compilers js:babel-core/register --recursive \"tests/**/*.tests.js\"",
-        "test:watch": "npm test -- --watch",
+        "test": "mocha --timeout=15000 --require @babel/register \"tests/**/*.tests.js\"",
+        "test-watch": "npm test -- --watch",
         "lint": "standard",
         "lint-fix": "standard --fix"
     },
@@ -27,13 +25,19 @@
     },
     "homepage": "https://github.com/jankapunkt/js-design-pattern#readme",
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
-        "babel-eslint": "^7.2.3",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-preset-stage-0": "^6.24.1",
+        "@babel/cli": "^7.0.0",
+        "@babel/core": "^7.0.1",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/register": "^7.0.0",
+        "babel-minify": "^0.5.0-alpha.3cc09dcf",
+        "babel-plugin-istanbul": "^5.0.1",
         "chai": "^4.1.2",
-        "mocha": "^3.5.2",
-        "standard": "^12.0.1"
+        "mocha": "^5.2.0",
+        "standard": "*"
+    },
+    "babel": {
+        "presets": [
+            "@babel/env"
+        ]
     }
 }
