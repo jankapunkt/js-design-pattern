@@ -7,7 +7,9 @@
         "build": "node build.js",
         "prepublish": "npm run build",
         "test": "mocha --timeout 15000 --compilers js:babel-core/register --recursive \"tests/**/*.tests.js\"",
-        "test:watch": "npm test -- --watch"
+        "test:watch": "npm test -- --watch",
+        "lint": "standard",
+        "lint-fix": "standard --fix"
     },
     "repository": {
         "type": "git",
