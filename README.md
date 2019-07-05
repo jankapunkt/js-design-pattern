@@ -24,8 +24,8 @@ This is a compilation of software design pattern in ES 6 JavaScript, mostly for 
 	</tr>
 	<tr>
 		<td align="left" >Lazy Instantiation</td>
-		<td align="center"  style="background-color:#AA0000"></td>
-		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000">&#10004;</td>
+		<td align="center"  style="background-color:#AA0000">&#10004;</td>
 	</tr>	
 	<tr>
 		<td align="left" >Branching</td>
