@@ -1,7 +1,59 @@
-# js-design-pattern
-Examples of software design pattern in ES 6 JavaScript. For learning purposes.
+# Javascript Design Pattern
+
+This is a compilation of software design pattern in ES 6 JavaScript, mostly for learning purposes.
+
 
 ## Implementation Status
+
+### OOP Basics
+
+<table style="width:100%;">
+	<tr>
+		<th>Name</th>
+		<th>Implemented</th>
+		<th>Tested</th>
+	</tr>
+	<tr>
+		<td>Prototype class</td>
+		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#AA0000">No</td>
+	</tr>
+	<tr>
+		<td>ES6 class</td>
+		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#AA0000">No</td>
+	</tr>
+	<tr>
+		<td>Lazy Instantiation</td>
+		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#AA0000">No</td>
+	</tr>	
+	<tr>
+		<td>Branching</td>
+		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#AA0000">No</td>
+	</tr>	
+	<tr>
+		<td>Interface</td>
+		<td style="background-color:#00AA00">Yes</td>
+		<td style="background-color:#00AA00">Yes</td>
+	</tr>
+	<tr>
+		<td>Mixin</td>
+		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#AA0000">No</td>
+	</tr>
+	<tr>
+		<td>Chaining</td>
+		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#AA0000">No</td>
+	</tr>
+	<tr>
+		<td>Singleton</td>
+		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#AA0000">No</td>
+	</tr>
+</table>
 
 ### Creational patterns
 
@@ -44,7 +96,7 @@ Examples of software design pattern in ES 6 JavaScript. For learning purposes.
 	</tr>
 	<tr>
 		<td>Object pool</td>
-		<td style="background-color:#AA0000">No</td>
+		<td style="background-color:#00AA00">Yes</td>
 		<td style="background-color:#AA0000">No</td>
 	</tr>
 	<tr>
