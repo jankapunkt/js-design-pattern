@@ -2,7 +2,6 @@
 
 This is a compilation of software design pattern in ES 6 JavaScript, mostly for learning purposes.
 
-
 ## Implementation Status
 
 ### OOP Basics
@@ -14,44 +13,44 @@ This is a compilation of software design pattern in ES 6 JavaScript, mostly for 
 		<th>Tested</th>
 	</tr>
 	<tr>
-		<td>Prototype class</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Prototype class</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>ES6 class</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >ES6 class</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Lazy Instantiation</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Lazy Instantiation</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>	
 	<tr>
-		<td>Branching</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Branching</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>	
 	<tr>
-		<td>Interface</td>
-		<td style="background-color:#00AA00">Yes</td>
-		<td style="background-color:#00AA00">Yes</td>
+		<td align="left" >Interface</td>
+		<td align="center"  style="background-color:#00AA00">&#10004;</td>
+		<td align="center"  style="background-color:#00AA00">&#10004;</td>
 	</tr>
 	<tr>
-		<td>Mixin</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Mixin</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Chaining</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Chaining</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Singleton</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Singleton</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 </table>
 
@@ -65,54 +64,54 @@ This is a compilation of software design pattern in ES 6 JavaScript, mostly for 
 		<th>Tested</th>
 	</tr>
 	<tr>
-		<td>Abstract Factory</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Abstract Factory</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Builder</td>
-		<td style="background-color:#00AA00">Yes</td>
-		<td style="background-color:#00AA00">Yes</td>
+		<td align="left" >Builder</td>
+		<td align="center"  style="background-color:#00AA00">&#10004;</td>
+		<td align="center"  style="background-color:#00AA00">&#10004;</td>
 	</tr>
 	<tr>
-    	<td>Dependency Injection</td>
-    	<td style="background-color:#00AA00">Yes</td>
-    	<td style="background-color:#00AA00">Yes</td>
+    	<td align="left" >Dependency Injection</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
     </tr>
 	<tr>
-    	<td>Factory Method</td>
-    	<td style="background-color:#00AA00">Yes</td>
-    	<td style="background-color:#00AA00">Yes</td>
+    	<td align="left" >Factory Method</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
     </tr>
 	<tr>
-    	<td>Lazy Initialization</td>
-    	<td style="background-color:#00AA00">Yes</td>
-    	<td style="background-color:#00AA00">Yes</td>
+    	<td align="left" >Lazy Initialization</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
     </tr>
 	<tr>
-		<td>Multiton</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Multiton</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Object pool</td>
-		<td style="background-color:#00AA00">Yes</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Object pool</td>
+		<td align="center"  style="background-color:#00AA00">&#10004;</td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Prototype</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Prototype</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Resource acquisition is initialization (RAII)</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Resource acquisition is initialization (RAII)</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Singleton</td>
-    	<td style="background-color:#00AA00">Yes</td>
-    	<td style="background-color:#00AA00">Yes</td>
+		<td align="left" >Singleton</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
+    	<td align="center"  style="background-color:#00AA00">&#10004;</td>
 	</tr>
 </table>
 
@@ -125,59 +124,59 @@ This is a compilation of software design pattern in ES 6 JavaScript, mostly for 
 		<th>Tested</th>
 	</tr>
 	<tr>
-		<td>Adapter</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Adapter</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Bridge</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Bridge</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-    	<td>Composite</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Composite</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-    	<td>Decorator</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Decorator</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-    	<td>Facade</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Facade</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-		<td>Flyweight</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Flyweight</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Front Controller</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Front Controller</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Marker</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Marker</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Module</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Module</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Proxy</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Proxy</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Twin</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Twin</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 </table>
 
@@ -190,74 +189,74 @@ This is a compilation of software design pattern in ES 6 JavaScript, mostly for 
 		<th>Tested</th>
 	</tr>
 	<tr>
-		<td>Blackboard</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Blackboard</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Chain of Responsibility</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Chain of Responsibility</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-    	<td>Command</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Command</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-    	<td>Interpreter</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Interpreter</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-    	<td>Mediator</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Mediator</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-		<td>Memento</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Memento</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Null Object</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Null Object</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Observer</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Observer</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Servant</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Servant</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Specification</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Specification</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>State</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >State</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Strategy</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Strategy</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Template Method</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Template Method</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Visitor</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Visitor</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 </table>
 
@@ -271,83 +270,83 @@ This is a compilation of software design pattern in ES 6 JavaScript, mostly for 
 		<th>Tested</th>
 	</tr>
 	<tr>
-		<td>Active Object</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Active Object</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Balking</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Balking</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-    	<td>Binding Properties</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Binding Properties</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-    	<td>Blockchain</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Blockchain</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-    	<td>Double-checked locking</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+    	<td align="left" >Double-checked locking</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
     </tr>
 	<tr>
-		<td>Event-based asynchronous</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Event-based asynchrous</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Guarded suspension</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Guarded suspension</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Join</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Join</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Lock</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Lock</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Messaging design pattern (MDP)</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Messaging design pattern (MDP)</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Monitor Object</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Monitor Object</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Reactor</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Reactor</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Read-write lock</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Read-write lock</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Scheduler</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Scheduler</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Thread pool</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Thread pool</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 	<tr>
-		<td>Thread-specific storage</td>
-		<td style="background-color:#AA0000">No</td>
-		<td style="background-color:#AA0000">No</td>
+		<td align="left" >Thread-specific storage</td>
+		<td align="center"  style="background-color:#AA0000"></td>
+		<td align="center"  style="background-color:#AA0000"></td>
 	</tr>
 </table>
