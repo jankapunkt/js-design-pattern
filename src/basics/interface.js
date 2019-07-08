@@ -1,6 +1,11 @@
 export const Implements = function (fct, ...ifacesArgs) {
-  return function (...fctArgs) {
+  const interfaceFct = function (...fctArgs) {
     let i, j, k // we use classic vars for indexing and immediate error throwing
+
+    // if no args provided but ifaces have been declared
+    if (fctArgs.length !== ifacesArgs.length) {
+      throw new Error(`[${fct.name}] expected ${ifacesArgs.length} parameters, but got only ${fctArgs.length}`)
+    }
 
     // let's go through all runtime args of this function
     for (i = 0; i < fctArgs.length; i++) {
@@ -34,4 +39,21 @@ export const Implements = function (fct, ...ifacesArgs) {
     }
     return fct.call(this, ...fctArgs)
   }
+  interfaceFct.interfaces = ifacesArgs
+  return interfaceFct
+}
+
+export const attachImplementsToFunction = () => {
+  global.Function.prototype.implements = (function () {
+    let attached = false
+
+    return function attachImplements (...args) {
+      if (attached) {
+        throw new Error(`Forbidden: attempt to reattach interface to function ${this.name}`)
+      }
+      const functionWithInterface = Implements(this, ...args)
+      attached = true
+      return functionWithInterface
+    }
+  })()
 }

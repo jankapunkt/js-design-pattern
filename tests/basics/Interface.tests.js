@@ -1,11 +1,25 @@
 /* eslint-env mocha */
 import { assert } from 'chai'
-import { Implements } from '../../src/basics/interface'
+import { attachImplementsToFunction, Implements } from '../../src/basics/interface'
 
 // import { notImplemented } from '../helpers.tests'
 
 describe('basics/Interface', function () {
   describe('Interface', function () {
+    afterEach(function () {
+      if (Function.prototype.implements) {
+        delete Function.prototype.implements
+      }
+    })
+
+    it('has a link to the original interface dfinition', function () {
+      const IPoint = { x: Number, y: Number }
+
+      const acceptElement = Implements(function (element) {}, [ IPoint ])
+      assert.isDefined(acceptElement.interfaces)
+      assert.equal(acceptElement.interfaces[ 0 ][ 0 ], IPoint)
+    })
+
     it('works with one interface for one parameter', function (done) {
       const IPoint = { x: Number, y: Number }
 
@@ -93,6 +107,37 @@ describe('basics/Interface', function () {
         width: 200,
         height: 300,
         color: '#FF00AA'
+      })
+    })
+
+    it('can be attached as Function prototype', function () {
+      attachImplementsToFunction()
+      const IPoint = { x: Number, y: Number }
+
+      function acceptElement (element) {
+        const { x } = element
+        const { y } = element
+        assert.isDefined(x)
+        assert.isDefined(y)
+      }
+
+      assert.isDefined(acceptElement.implements)
+
+      acceptElement.implements([ IPoint ])
+      acceptElement({ x: 10, y: 5, width: 200, height: 300 })
+
+      assert.throws(function () {
+        acceptElement.implements([ {} ])
+      })
+
+      assert.throws(function () {
+        acceptElement()
+      })
+      assert.throws(function () {
+        acceptElement('asdasd')
+      })
+      assert.throws(function () {
+        acceptElement({ width: 200, height: 300 })
       })
     })
   })
