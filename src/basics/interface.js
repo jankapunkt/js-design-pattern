@@ -4,7 +4,6 @@ export const Implements = function (fct, ...ifacesArgs) {
 
     // let's go through all runtime args of this function
     for (i = 0; i < fctArgs.length; i++) {
-
       // get all interfaces for the current arg position
       // and skip if none have been declared for this position
       const interfaces = ifacesArgs[ i ]

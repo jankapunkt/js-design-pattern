@@ -6,7 +6,6 @@ import { Implements } from '../../src/basics/interface'
 
 describe('basics/Interface', function () {
   describe('Interface', function () {
-
     it('works with one interface for one parameter', function (done) {
       const IPoint = { x: Number, y: Number }
 

@@ -1,14 +1,15 @@
+/* global $ */
 const Editor = { // caller
   stack: [],
   undos: [],
 
-  call(command) {
+  call (command) {
     this.stack.push(command)
     command.execute()
     return this
   },
 
-  undo() {
+  undo () {
     const command = this.stack.pop()
     console.log(command)
     if (!command) return this
@@ -17,7 +18,7 @@ const Editor = { // caller
     return this
   },
 
-  redo() {
+  redo () {
     const command = this.undos.pop()
     if (!command) return this
     this.call(command)
@@ -33,19 +34,19 @@ $(document).ready(() => {
   }
 
   const createCommand = ({ target, old, value }) => ({
-    execute() {
+    execute () {
       person[target] = value
     },
-    undo() {
+    undo () {
       person[target] = old
     },
-    info() {
-      return {target, old, value}
+    info () {
+      return { target, old, value }
     }
   })
 
   const eventHandler = (target) => {
-    $(`#${target}Button`).on('click', function(event) {
+    $(`#${target}Button`).on('click', function (event) {
       const command = createCommand({
         target: target,
         old: person[target],

@@ -10,7 +10,7 @@ export class ServiceWithConstructorInjection {
   execute () {
     return this.contextProvider.getContext()
   }
-};
+}
 
 /// ///////////////////////////////////////////////////////////////
 // SETTER INJECTION
