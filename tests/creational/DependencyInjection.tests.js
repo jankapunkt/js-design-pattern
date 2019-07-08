@@ -1,11 +1,14 @@
 /* eslint-env mocha */
 import { assert } from 'chai'
-import { ServiceWithConstructorInjection, ServiceWithSetterInjection } from '../../src/creational/DependencyInjection'
+import {
+  ServiceWithConstructorInjection,
+  ServiceWithSetterInjection,
+  ServiceWithInterfaceInjection
+} from '../../src/creational/DependencyInjection'
 
 describe('creational/DependencyInjection', function () {
   it('constructor injection', function () {
     const context = 'http://domain.tld'
-
     const serviceInstance = new ServiceWithConstructorInjection({
       getContext: function () {
         return context
@@ -38,5 +41,25 @@ describe('creational/DependencyInjection', function () {
     })
     assert.equal(setterServiceInstance.execute(), otherContext)
     assert.notEqual(setterServiceInstance.execute(), context)
+  })
+
+  it('interface injection', function () {
+    const context = 'http://domain.tld'
+    const serviceInstance = new ServiceWithInterfaceInjection()
+    assert.isDefined(serviceInstance.setContextProvider.interfaces)
+
+    serviceInstance.setContextProvider({
+      getContext: function () {
+        return context
+      }
+    })
+
+    assert.equal(serviceInstance.execute(), context)
+    assert.throws(function () {
+      new ServiceWithInterfaceInjection().setContextProvider()
+    })
+    assert.throws(function () {
+      new ServiceWithInterfaceInjection().setContextProvider({ getContext: 1 })
+    })
   })
 })
